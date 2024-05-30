@@ -14,7 +14,8 @@ document.addEventListener("DOMContentLoaded", function() {
     allLinks.forEach(function(link) {
         link.addEventListener("click", function(event) {
             event.preventDefault();
-            linkToFollow = this.getAttribute("data-link") || this.href;
+            var potentialLink = this.getAttribute("data-link");
+            linkToFollow = potentialLink ? potentialLink : ""; // Only use data-link, ignore href if data-link is not present
             var note = this.getAttribute("data-note");
             isAdultLink = link.classList.contains("adult-link"); // Update isAdultLink based on the clicked link
 
@@ -24,8 +25,12 @@ document.addEventListener("DOMContentLoaded", function() {
                 notesModal.style.display = "flex";
             } else if (isAdultLink && !isAdultVerified) {
                 modal.style.display = "flex";
-            } else {
+            } else if (linkToFollow) { // Check if there is a link to follow
                 window.open(linkToFollow, "_blank");
+            } else {
+                // If no link to follow, just close the modal if it's open
+                notesModal.style.display = "none";
+                modal.style.display = "none";
             }
         });
     });
@@ -34,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function() {
         notesModal.style.display = "none";
         if (isAdultLink && !isAdultVerified) {
             modal.style.display = "flex";
-        } else {
+        } else if (linkToFollow) { // Check if there is a link to follow
             window.open(linkToFollow, "_blank");
         }
         // Do not reset linkToFollow here
