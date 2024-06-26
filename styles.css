@@ -266,3 +266,68 @@ footer {
     color: white;
     text-decoration: none;
 }
+
+.happening-soon {
+    position: relative; /* Ensure the pseudo-element is positioned relative to this container */
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    overflow: hidden; /* Hide overflow to ensure the pseudo-element doesn't affect layout */
+}
+
+.happening-soon::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 20, 147, 0.8); /* Solid pink background */
+    filter: blur(5px); /* Add blur effect */
+    animation: fadeInOut 3s infinite; /* Add fade in and out animation */
+    z-index: -1; /* Ensure the pseudo-element is behind the text and button */
+    border-radius: 10px; /* Match the border radius of the container */
+}
+
+@keyframes fadeInOut {
+    0%, 100% {
+        opacity: 0.5; /* Start and end with lower opacity */
+    }
+    50% {
+        opacity: 1; /* Full opacity in the middle */
+    }
+}
+
+.countdown {
+    margin-top: 10px;
+    font-size: 1.2em;
+    color: #fff;
+    text-shadow: 0 0 10px rgba(255, 20, 147, 0.8); /* Add glow effect to the text */
+}
+
+.happening-soon h2 {
+    margin: 0 0 10px;
+    font-size: 24px;
+    color: #fff;
+    text-shadow: 0 0 10px rgba(255, 20, 147, 0.8); /* Add glow effect to the text */
+}
+
+.happening-soon .button {
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; 
+    padding: 10px 20px;
+    background-color: #ff1493;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s; /* Add smooth transition for background color and transform */
+    text-align: center;
+    text-shadow: 0 0 10px rgba(255, 20, 147, 0.8); /* Add glow effect to the button text */
+}
+
+.happening-soon .button:hover {
+    background-color: #ff69b4;
+    transform: scale(1.05); /* Slightly enlarge the button on hover for a smooth animation */
+}

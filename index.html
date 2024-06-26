@@ -10,6 +10,15 @@
 </head>
 <body>
     <div class="container">
+        <!-- New Section for Happening Soon -->
+        <section class="happening-soon">
+            <h2>Happening Soon</h2>
+            <a href="https://www.twitch.tv/meepskitten/schedule?segmentID=9255fdef-9a8d-470e-ae25-32b2f4434e0e" target="_blank" class="button">
+                <span class="main-text">12 Hour Hardcore Stream</span>
+                <span class="subtitle">Twitch front page special event</span>
+            </a>
+            <div id="countdown" class="countdown">loading</div> <!-- Countdown element -->
+        </section>
         <header>
             <img src="pfp.webp" alt="Profile Picture" class="profile-picture">
             <h1>Meeps' Links</h1>
@@ -68,5 +77,36 @@
     </div>
 
     <script src="script.js"></script>
-</body>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Set the date we're counting down to
+            var countDownDate = new Date("July 19, 2024 18:00:00 PDT").getTime();
+
+            // Update the countdown every 1 second
+            var countdownFunction = setInterval(function () {
+                // Get today's date and time
+                var now = new Date().getTime();
+
+                // Find the distance between now and the countdown date
+                var distance = countDownDate - now;
+
+                // Time calculations for days, hours, minutes, and seconds
+                var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                // Display the result in the element with id="countdown"
+                document.getElementById("countdown").innerHTML = days + "D " + hours + "H " + minutes + "M " + seconds + "S";
+
+                // If the countdown is finished, write some text
+                if (distance < 0) {
+                    clearInterval(countdownFunction);
+                    document.getElementById("countdown").innerHTML = "EXPIRED";
+                }
+            }, 1000);
+        });
+    </script>
+    </body>
 </html>
+
