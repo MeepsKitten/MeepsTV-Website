@@ -30,25 +30,59 @@
             <h1>Meeps' Links</h1>
         </header>
         <main>
-            <section>
-                <h2>Media</h2>
-                <a href="https://twitch.tv/MeepsKitten" target="_blank" class="button"><span class="main-text">Twitch</span> <span class="subtitle">Check out my streams here</span></a>
-                <a href="https://tiktok.com/@astronautmeeps" target="_blank" class="button"><span class="main-text">TikTok</span> <span class="subtitle">Watch highlights and tidbits on TikTok</span></a>
-                <a href="https://youtube.com/c/MeepsKitten" target="_blank" class="button"><span class="main-text">YouTube</span> <span class="subtitle">Subscribe to my channel</span></a>
-                <a href="https://youtube.com/@AstronautMeeps" target="_blank" class="button"><span class="main-text">VOD Archive</span> <span class="subtitle">Subscribe to my VOD channel</span></a>
-                <a href="https://ytjobs.co/talent/profile/209055?r=494" target="_blank" class="button"><span class="main-text">My Editor</span> <span class="subtitle">They edit my shorts!</span></a>       
+            <section class="dropdown-section">
+                <button class="section-toggle" id="media-toggle" aria-expanded="false">
+                    <h2>Media</h2>
+                    <i class="fas fa-chevron-down section-icon"></i>
+                </button>
+                <div class="section-content" id="media-content">
+                    <a href="https://twitch.tv/MeepsKitten" target="_blank" class="button"><span class="main-text">Twitch</span> <span class="subtitle">Check out my streams here</span></a>
+                    <a href="https://tiktok.com/@astronautmeeps" target="_blank" class="button"><span class="main-text">TikTok</span> <span class="subtitle">Watch highlights and tidbits on TikTok</span></a>
+                    <a href="https://youtube.com/c/MeepsKitten" target="_blank" class="button"><span class="main-text">YouTube</span> <span class="subtitle">Subscribe to my channel</span></a>
+                    <a href="https://youtube.com/@AstronautMeeps" target="_blank" class="button"><span class="main-text">VOD Archive</span> <span class="subtitle">Subscribe to my VOD channel</span></a>
+                    <a href="https://meepskitten.itch.io/" target="_blank" class="button"><span class="main-text">itch.io</span> <span class="subtitle">Check out my free tools!</span></a>       
+                </div>
             </section>
-            <section>
-                <h2>Social</h2>
-                <a href="https://x.com/MeepsKitten" target="_blank" class="button"><span class="main-text">Twitter (aka X)</span> <span class="subtitle">Follow me on Twitter</span></a>
-                <a href="https://discord.gg/5BAv8BcFmz" target="_blank" class="button"><span class="main-text">Discord</span> <span class="subtitle">Join my Discord server</span></a>
-                <a href="https://bsky.app/profile/meeps.tv" target="_blank" class="button"><span class="main-text">Bluesky</span> <span class="subtitle">Connect with me on Bluesky</span></a>
+            <section class="dropdown-section">
+                <button class="section-toggle" id="social-toggle" aria-expanded="false">
+                    <h2>Social</h2>
+                    <i class="fas fa-chevron-down section-icon"></i>
+                </button>
+                <div class="section-content" id="social-content">
+                    <a href="https://x.com/MeepsKitten" target="_blank" class="button"><span class="main-text">Twitter (aka X)</span> <span class="subtitle">Follow me on Twitter</span></a>
+                    <a href="https://discord.gg/5BAv8BcFmz" target="_blank" class="button"><span class="main-text">Discord</span> <span class="subtitle">Join my Discord server</span></a>
+                    <a href="https://bsky.app/profile/meeps.tv" target="_blank" class="button"><span class="main-text">Bluesky</span> <span class="subtitle">Connect with me on Bluesky</span></a>
+                </div>
             </section>
-            <section>
-                <h2>Adults Only</h2>
-                <a href="https://x.com/MeepsNaked" data-link="https://x.com/MeepsNaked" class="button adult-link"><span class="main-text">After Dark X (18+ only)</span> <span class="subtitle">NSFW (Twitter)</span></a>
-                <a href="https://bsky.app/profile/meeps.porn" data-link="https://bsky.app/profile/meeps.porn" class="button adult-link"><span class="main-text">Bluesky After Dark (18+ Only)</span> <span class="subtitle">NSFW</span></a>
-                <a href="https://seraphictiger.com/collections/meepskitten" data-link="https://seraphictiger.com/collections/meepskitten" target="_blank" class="button adult-link"><span class="main-text">NSFW Prints</span> <span class="subtitle">Use code 'stinkycat' for 10% off</span></a>
+            <section class="dropdown-section">
+                <button class="section-toggle" id="adults-toggle" aria-expanded="false">
+                    <h2>Adults Only</h2>
+                    <i class="fas fa-chevron-down section-icon"></i>
+                </button>
+                <div class="section-content" id="adults-content">
+                    <a href="https://x.com/MeepsNaked" data-link="https://x.com/MeepsNaked" class="button adult-link"><span class="main-text">After Dark X (18+ only)</span> <span class="subtitle">NSFW (Twitter)</span></a>
+                    <a href="https://bsky.app/profile/meeps.porn" data-link="https://bsky.app/profile/meeps.porn" class="button adult-link"><span class="main-text">Bluesky After Dark (18+ Only)</span> <span class="subtitle">NSFW</span></a>
+                    <a href="https://seraphictiger.com/collections/meepskitten" data-link="https://seraphictiger.com/collections/meepskitten" target="_blank" class="button adult-link"><span class="main-text">NSFW Prints</span> <span class="subtitle">Use code 'stinkycat' for 10% off</span></a>
+                </div>
+            </section>
+            <section class="dropdown-section credits-section">
+                <button class="section-toggle" id="credits-toggle" aria-expanded="false">
+                    <h2>Credits</h2>
+                    <i class="fas fa-chevron-down section-icon"></i>
+                </button>
+                <div class="section-content" id="credits-content">
+                    <a href="https://ytjobs.co/talent/profile/209055?r=494" target="_blank" class="button"><span class="main-text">My Editor</span> <span class="subtitle">They edit my shorts!</span></a>
+                    <div class="art-credits">
+                        <h3>Art by:</h3>
+                        <a href="https://www.twitch.tv/nyxumnightshade" target="_blank" class="button"><span class="main-text">nyxumnightshade</span> <span class="subtitle">Avatar</span></a>
+                        <a href="https://www.twitch.tv/missmixi" target="_blank" class="button"><span class="main-text">missmixi</span> <span class="subtitle">ARKit</span></a>
+                        <a href="https://x.com/AtlasInu" target="_blank" class="button"><span class="main-text">AtlasInu</span> <span class="subtitle">Twitch Icon</span></a>
+                        <a href="https://x.com/singafurian" target="_blank" class="button"><span class="main-text">singafurian</span> <span class="subtitle">Banner/Offline image</span></a>
+                        <a href="https://x.com/gecko_Zen" target="_blank" class="button"><span class="main-text">gecko_Zen</span> <span class="subtitle">Twitch Intro image</span></a>
+                        <a href="https://x.com/dokibird" target="_blank" class="button"><span class="main-text">dokibird</span> <span class="subtitle">Emotes</span></a>
+                        <a href="https://x.com/Julunes_Art" target="_blank" class="button"><span class="main-text">Julunes_Art</span> <span class="subtitle">Emotes & Beeps</span></a>
+                    </div>
+                </div>
             </section>
         </main>
         <footer>

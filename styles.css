@@ -59,6 +59,11 @@ h2 {
     margin: 1.5em 0 1em;
 }
 
+/* Override h2 margin when inside dropdown toggle */
+.section-toggle h2 {
+    margin: 0;
+}
+
 .button {
     position: relative;
     display: flex;
@@ -330,4 +335,93 @@ footer {
 .happening-soon .button:hover {
     background-color: #ff69b4;
     transform: scale(1.05); /* Slightly enlarge the button on hover for a smooth animation */
+}
+
+/* Dropdown Sections */
+.dropdown-section {
+    margin-top: 1.5em;
+}
+
+.section-toggle {
+    background: rgba(71, 165, 200, 0.2);
+    border: 2px solid rgba(71, 165, 200, 0.4);
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75em 1em;
+    color: #fff;
+    transition: all 0.3s ease;
+    margin-bottom: 0;
+}
+
+.section-toggle:hover {
+    background: rgba(71, 165, 200, 0.3);
+    border-color: rgba(71, 165, 200, 0.6);
+    transform: translateY(-1px);
+}
+
+.section-toggle:active {
+    transform: translateY(0);
+}
+
+.section-toggle h2 {
+    margin: 0;
+    font-size: 1.2em;
+    text-align: left;
+    color: #fff;
+}
+
+.section-icon {
+    font-size: 1em;
+    transition: transform 0.3s ease;
+    color: #47a5c8;
+    margin-left: 1em;
+}
+
+.section-toggle[aria-expanded="true"] {
+    background: rgba(71, 165, 200, 0.25);
+    border-color: rgba(71, 165, 200, 0.5);
+    border-radius: 8px 8px 0 0;
+}
+
+.section-toggle[aria-expanded="true"] .section-icon {
+    transform: rotate(180deg);
+}
+
+.section-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out, opacity 0.3s ease-out, padding 0.3s ease-out;
+    opacity: 0;
+    padding: 0 1em;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 0 0 8px 8px;
+    border: 2px solid rgba(71, 165, 200, 0.3);
+    border-top: none;
+}
+
+.section-content.open {
+    max-height: 2000px;
+    opacity: 1;
+    padding: 1em;
+}
+
+.art-credits {
+    margin-top: 1em;
+    padding-top: 1em;
+    border-top: 1px solid rgba(71, 165, 200, 0.2);
+}
+
+.art-credits h3 {
+    font-size: 0.95rem;
+    margin: 0 0 0.75em;
+    color: #bbb;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 0.5em 0;
 }

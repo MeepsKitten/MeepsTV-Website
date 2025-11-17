@@ -65,5 +65,24 @@ document.addEventListener("DOMContentLoaded", function() {
         });
         linkToFollow = ""; // Reset link to follow after handling
     };
+
+    // Dropdown toggles for all sections
+    var dropdownToggles = document.querySelectorAll(".section-toggle");
+    
+    dropdownToggles.forEach(function(toggle) {
+        toggle.addEventListener("click", function() {
+            var isExpanded = toggle.getAttribute("aria-expanded") === "true";
+            toggle.setAttribute("aria-expanded", !isExpanded);
+            
+            // Find the corresponding content div
+            var toggleId = toggle.getAttribute("id");
+            var contentId = toggleId.replace("-toggle", "-content");
+            var content = document.getElementById(contentId);
+            
+            if (content) {
+                content.classList.toggle("open");
+            }
+        });
+    });
 });
 
