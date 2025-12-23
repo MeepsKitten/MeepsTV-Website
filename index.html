@@ -3,191 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meeps' Links</title>
+    <title>MeepsTV Events</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="icon" type="image/webp" href="pfp.webp">
 </head>
 <body>
-    <div class="container">
-        <!-- New Section for Happening Soon -->
-        <section class="happening-soon">
-            <h2>Happening Soon</h2>
-            <a href="https://www.twitch.tv/meepskitten/schedule?segmentID=9255fdef-9a8d-470e-ae25-32b2f4434e0e" target="_blank" class="button">
-                <span class="main-text">12 Hour Hardcore Stream</span>
-                <span class="subtitle">Twitch front page special event</span>
-            </a>
-            <div id="countdown" class="countdown">loading</div> 
-            <a href="https://www.youtube.com/watch?v=IbmyqUobIsA" target="_blank" class="button">
-                <span class="main-text">Anniversary Video</span>
-                <span class="subtitle">My breakdown video on my surprise redebut</span>
-            </a>
-            <div id="countdown-anniversary" class="countdown">loading</div> 
-        </section>
-        
-        <!-- New Timed Event Section -->
-        <section class="timed-event">
-            <h2>Special Event: Community Feedback</h2>
-            <a href="https://forms.gle/YT9VuVCk4SnPW1bj7" target="_blank" class="button">
-                <span class="main-text">Fill Out the Feedback Form</span>
-                <span class="subtitle">Let us know your thoughts!</span>
-            </a>
-            <div id="feedback-countdown" class="countdown">loading</div>
+    <header>
+        <h1>Welcome to MeepsTV</h1>
+    </header>
+    <main>
+        <!-- Timed Event Section -->
+        <section id="timed-event">
+            <h2>Current Event</h2>
+            <p>Don't miss out on our featured event happening now!</p>
+            <p><strong>Event Details:</strong> Join us for an exciting experience.</p>
         </section>
 
-        <header>
-            <img src="pfp.webp" alt="Profile Picture" class="profile-picture">
-            <h1>Meeps' Links</h1>
-        </header>
-        <main>
-            <section class="dropdown-section">
-                <button class="section-toggle" id="media-toggle" aria-expanded="false">
-                    <h2>Media</h2>
-                    <i class="fas fa-chevron-down section-icon"></i>
-                </button>
-                <div class="section-content" id="media-content">
-                    <a href="https://twitch.tv/MeepsKitten" target="_blank" class="button"><span class="main-text">Twitch</span> <span class="subtitle">Check out my streams here</span></a>
-                    <a href="https://tiktok.com/@astronautmeeps" target="_blank" class="button"><span class="main-text">TikTok</span> <span class="subtitle">Watch highlights and tidbits on TikTok</span></a>
-                    <a href="https://youtube.com/c/MeepsKitten" target="_blank" class="button"><span class="main-text">YouTube</span> <span class="subtitle">Subscribe to my channel</span></a>
-                    <a href="https://youtube.com/@AstronautMeeps" target="_blank" class="button"><span class="main-text">VOD Archive</span> <span class="subtitle">Subscribe to my VOD channel</span></a>
-                    <a href="https://meepskitten.itch.io/" target="_blank" class="button"><span class="main-text">itch.io</span> <span class="subtitle">Check out my free tools!</span></a>       
-                </div>
-            </section>
-            <section class="dropdown-section">
-                <button class="section-toggle" id="social-toggle" aria-expanded="false">
-                    <h2>Social</h2>
-                    <i class="fas fa-chevron-down section-icon"></i>
-                </button>
-                <div class="section-content" id="social-content">
-                    <a href="https://x.com/MeepsKitten" target="_blank" class="button"><span class="main-text">Twitter (aka X)</span> <span class="subtitle">Follow me on Twitter</span></a>
-                    <a href="https://discord.gg/5BAv8BcFmz" target="_blank" class="button"><span class="main-text">Discord</span> <span class="subtitle">Join my Discord server</span></a>
-                    <a href="https://bsky.app/profile/meeps.tv" target="_blank" class="button"><span class="main-text">Bluesky</span> <span class="subtitle">Connect with me on Bluesky</span></a>
-                    <a href="https://www.instagram.com/meepskitten/" target="_blank" class="button"><span class="main-text">Instagram</span> <span class="subtitle">Follow me on Instagram</span></a>
-                </div>
-            </section>
-            <section class="dropdown-section">
-                <button class="section-toggle" id="adults-toggle" aria-expanded="false">
-                    <h2>Adults Only</h2>
-                    <i class="fas fa-chevron-down section-icon"></i>
-                </button>
-                <div class="section-content" id="adults-content">
-                    <a href="https://x.com/MeepsNaked" data-link="https://x.com/MeepsNaked" class="button adult-link"><span class="main-text">After Dark X (18+ only)</span> <span class="subtitle">NSFW</span></a>   
-                    <a href="https://bsky.app/profile/meeps.porn" data-link="https://bsky.app/profile/meeps.porn" class="button adult-link"><span class="main-text">Bluesky After Dark (18+ Only)</span></a>
-                    <a href="https://t.me/meepsnaked" data-link="https://t.me/meepsnaked" target="_blank" class="button adult-link"><span class="main-text">Telegram Channel (18+ Only)</span> <span class="subtitle">Join with care!</span></a>
-                    <a href="https://seraphictiger.com/collections/meepskitten" data-link="https://seraphictiger.com/collections/meepskitten" target="_blank" class="button adult-link"><span class="main-text">Merch Collection</span> <span class="subtitle">Treat yourself!</span></a>
-                    <a href="https://chair.zonked.tv/meeps/" data-link="https://chair.zonked.tv/meeps/" target="_blank" class="button adult-link"><span class="main-text">"throne*"</span> <span class="subtitle">My wishlist</span></a>
-                </div>
-            </section>
-            <section class="dropdown-section credits-section">
-                <button class="section-toggle" id="credits-toggle" aria-expanded="false">
-                    <h2>Credits</h2>
-                    <i class="fas fa-chevron-down section-icon"></i>
-                </button>
-                <div class="section-content" id="credits-content">
-                    <a href="https://ytjobs.co/talent/profile/209055?r=494" target="_blank" class="button"><span class="main-text">My Editor</span> <span class="subtitle">They edit my shorts!</span></a>
-                    <div class="art-credits">
-                        <h3>Art by:</h3>
-                        <a href="https://www.twitch.tv/nyxumnightshade" target="_blank" class="button"><span class="main-text">nyxumnightshade</span> <span class="subtitle">Avatar</span></a>
-                        <a href="https://www.twitch.tv/missmixi" target="_blank" class="button"><span class="main-text">missmixi</span> <span class="subtitle">ARKit</span></a>
-                        <a href="https://x.com/AtlasInu" target="_blank" class="button"><span class="main-text">AtlasInu</span> <span class="subtitle">Twitch Icon</span></a>
-                        <a href="https://x.com/singafurian" target="_blank" class="button"><span class="main-text">singafurian</span> <span class="subtitle">Banner/Offline image</span></a>
-                        <a href="https://x.com/gecko_Zen" target="_blank" class="button"><span class="main-text">gecko_Zen</span> <span class="subtitle">Twitch Intro image</span></a>
-                        <a href="https://x.com/dokibird" target="_blank" class="button"><span class="main-text">dokibird</span> <span class="subtitle">Emotes</span></a>
-                        <a href="https://x.com/Julunes_Art" target="_blank" class="button"><span class="main-text">Julunes_Art</span> <span class="subtitle">Emotes & Beeps</span></a>
-                    </div>
-                </div>
-            </section>
-        </main>
-        <footer>
-            <div class="footer-icons">
-                <a href="https://twitch.tv/MeepsKitten" target="_blank"><i class="fab fa-twitch"></i></a>
-                <a href="https://tiktok.com/@astronautmeeps" target="_blank"><i class="fab fa-tiktok"></i></a>
-                <a href="https://youtube.com/c/MeepsKitten" target="_blank"><i class="fab fa-youtube"></i></a>
-                <a href="https://x.com/MeepsKitten" target="_blank"><i class="fab fa-twitter"></i></a>
-                <a href="https://discord.gg/5BAv8BcFmz" target="_blank"><i class="fab fa-discord"></i></a>
-                <a href="https://www.instagram.com/meepskitten/" target="_blank"><i class="fab fa-instagram"></i></a>
-            </div>
-        </footer>
-    </div>
-
-    <!-- Age Verification Modal -->
-    <div id="age-modal" class="modal">
-        <div class="modal-content">
-            <img src="q.png" alt="Question Image" class="modal-image">
-            <h2>Age Verification</h2>
-            <p>Are you 18 years or older?</p>
-            <button id="yes-button" class="button">Yes</button>
-            <button id="no-button" class="button">No</button>
-        </div>
-    </div>
-
-    <!-- Notes Modal -->
-    <div id="notes-modal" class="modal">
-        <div class="modal-content">
-            <h2 id="note-title">Note</h2>
-            <p id="note-text">This is a note about the link.</p>
-            <button id="note-ok-button" class="button">Okay :3</button>
-        </div>
-    </div>
-
-    <script src="script.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // Set the date we're counting down to
-            var countDownDate = new Date("July 19, 2024 18:00:00 PDT").getTime();
-            var anniversaryDate = new Date(countDownDate + 12 * 60 * 60 * 1000).getTime(); // 12 hours after the original
-            var feedbackDate = new Date("January 23, 2026 00:00:00").getTime(); // One month in the future
-        
-            // Update the countdown every 1 second
-            var countdownFunction = setInterval(function () {
-                // Get today's date and time
-                var now = new Date().getTime();
-        
-                // Find the distance between now and the countdown dates
-                var distance = countDownDate - now;
-                var anniversaryDistance = anniversaryDate - now;
-                var feedbackDistance = feedbackDate - now;
-        
-                // Time calculations for days, hours, minutes, and seconds
-                var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-        
-                var anniversaryDays = Math.floor(anniversaryDistance / (1000 * 60 * 60 * 24));
-                var anniversaryHours = Math.floor((anniversaryDistance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                var anniversaryMinutes = Math.floor((anniversaryDistance % (1000 * 60 * 60)) / (1000 * 60));
-                var anniversarySeconds = Math.floor((anniversaryDistance % (1000 * 60)) / 1000);
-
-                var feedbackDays = Math.floor(feedbackDistance / (1000 * 60 * 60 * 24));
-                var feedbackHours = Math.floor((feedbackDistance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                var feedbackMinutes = Math.floor((feedbackDistance % (1000 * 60 * 60)) / (1000 * 60));
-                var feedbackSeconds = Math.floor((feedbackDistance % (1000 * 60)) / 1000);
-        
-                // Display the result in the elements with id="countdown" and id="countdown-anniversary"
-                if (document.getElementById("countdown")) {
-                    document.getElementById("countdown").innerHTML = days + "D " + hours + "H " + minutes + "M " + seconds + "S";
-                }
-                if (document.getElementById("countdown-anniversary")) {
-                    document.getElementById("countdown-anniversary").innerHTML = anniversaryDays + "D " + anniversaryHours + "H " + anniversaryMinutes + "M " + anniversarySeconds + "S";
-                }
-                if (document.getElementById("feedback-countdown")) {
-                    document.getElementById("feedback-countdown").innerHTML = feedbackDays + "D " + feedbackHours + "H " + feedbackMinutes + "M " + feedbackSeconds + "S";
-                }
-
-                // If the countdowns are finished, write some text
-                if (distance < 0 && document.getElementById("countdown")) {
-                    clearInterval(countdownFunction);
-                    document.getElementById("countdown").innerHTML = "EXPIRED";
-                }
-                if (anniversaryDistance < 0 && document.getElementById("countdown-anniversary")) {
-                    document.getElementById("countdown-anniversary").innerHTML = "EXPIRED";
-                }
-                if (feedbackDistance < 0 && document.getElementById("feedback-countdown")) {
-                    document.getElementById("feedback-countdown").innerHTML = "EXPIRED";
-                }
-            }, 1000);
-        });
-        </script>
-    </body>
+        <!-- Additional future-focused sections can be added here -->
+    </main>
+    <footer>
+        <p>&copy; 2025 MeepsTV. All rights reserved.</p>
+    </footer>
+</body>
 </html>
