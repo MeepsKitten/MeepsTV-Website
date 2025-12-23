@@ -10,7 +10,7 @@
 </head>
 <body>
     <div class="container">
-        <!-- New Section for Happening Soon
+        <!-- New Section for Happening Soon -->
         <section class="happening-soon">
             <h2>Happening Soon</h2>
             <a href="https://www.twitch.tv/meepskitten/schedule?segmentID=9255fdef-9a8d-470e-ae25-32b2f4434e0e" target="_blank" class="button">
@@ -24,7 +24,17 @@
             </a>
             <div id="countdown-anniversary" class="countdown">loading</div> 
         </section>
-        -->
+        
+        <!-- New Timed Event Section -->
+        <section class="timed-event">
+            <h2>Special Event: Community Feedback</h2>
+            <a href="https://forms.gle/YT9VuVCk4SnPW1bj7" target="_blank" class="button">
+                <span class="main-text">Fill Out the Feedback Form</span>
+                <span class="subtitle">Let us know your thoughts!</span>
+            </a>
+            <div id="feedback-countdown" class="countdown">loading</div>
+        </section>
+
         <header>
             <img src="pfp.webp" alt="Profile Picture" class="profile-picture">
             <h1>Meeps' Links</h1>
@@ -61,11 +71,11 @@
                     <i class="fas fa-chevron-down section-icon"></i>
                 </button>
                 <div class="section-content" id="adults-content">
-                    <a href="https://x.com/MeepsNaked" data-link="https://x.com/MeepsNaked" class="button adult-link"><span class="main-text">After Dark X (18+ only)</span> <span class="subtitle">NSFW (Twitter)</span></a>
-                    <a href="https://bsky.app/profile/meeps.porn" data-link="https://bsky.app/profile/meeps.porn" class="button adult-link"><span class="main-text">Bluesky After Dark (18+ Only)</span> <span class="subtitle">NSFW</span></a>
-                    <a href="https://t.me/meepsnaked" data-link="https://t.me/meepsnaked" target="_blank" class="button adult-link"><span class="main-text">Telegram Channel (18+ Only)</span> <span class="subtitle">NSFW</span></a>
-                    <a href="https://seraphictiger.com/collections/meepskitten" data-link="https://seraphictiger.com/collections/meepskitten" target="_blank" class="button adult-link"><span class="main-text">NSFW Prints</span> <span class="subtitle">Use code 'stinkycat' for 10% off</span></a>
-                    <a href="https://chair.zonked.tv/meeps/" data-link="https://chair.zonked.tv/meeps/" target="_blank" class="button adult-link"><span class="main-text">"throne*"</span> <span class="subtitle">*but you dont pay anything</span></a>
+                    <a href="https://x.com/MeepsNaked" data-link="https://x.com/MeepsNaked" class="button adult-link"><span class="main-text">After Dark X (18+ only)</span> <span class="subtitle">NSFW</span></a>   
+                    <a href="https://bsky.app/profile/meeps.porn" data-link="https://bsky.app/profile/meeps.porn" class="button adult-link"><span class="main-text">Bluesky After Dark (18+ Only)</span></a>
+                    <a href="https://t.me/meepsnaked" data-link="https://t.me/meepsnaked" target="_blank" class="button adult-link"><span class="main-text">Telegram Channel (18+ Only)</span> <span class="subtitle">Join with care!</span></a>
+                    <a href="https://seraphictiger.com/collections/meepskitten" data-link="https://seraphictiger.com/collections/meepskitten" target="_blank" class="button adult-link"><span class="main-text">Merch Collection</span> <span class="subtitle">Treat yourself!</span></a>
+                    <a href="https://chair.zonked.tv/meeps/" data-link="https://chair.zonked.tv/meeps/" target="_blank" class="button adult-link"><span class="main-text">"throne*"</span> <span class="subtitle">My wishlist</span></a>
                 </div>
             </section>
             <section class="dropdown-section credits-section">
@@ -126,6 +136,7 @@
             // Set the date we're counting down to
             var countDownDate = new Date("July 19, 2024 18:00:00 PDT").getTime();
             var anniversaryDate = new Date(countDownDate + 12 * 60 * 60 * 1000).getTime(); // 12 hours after the original
+            var feedbackDate = new Date("January 23, 2026 00:00:00").getTime(); // One month in the future
         
             // Update the countdown every 1 second
             var countdownFunction = setInterval(function () {
@@ -135,6 +146,7 @@
                 // Find the distance between now and the countdown dates
                 var distance = countDownDate - now;
                 var anniversaryDistance = anniversaryDate - now;
+                var feedbackDistance = feedbackDate - now;
         
                 // Time calculations for days, hours, minutes, and seconds
                 var days = Math.floor(distance / (1000 * 60 * 60 * 24));
@@ -146,23 +158,36 @@
                 var anniversaryHours = Math.floor((anniversaryDistance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
                 var anniversaryMinutes = Math.floor((anniversaryDistance % (1000 * 60 * 60)) / (1000 * 60));
                 var anniversarySeconds = Math.floor((anniversaryDistance % (1000 * 60)) / 1000);
+
+                var feedbackDays = Math.floor(feedbackDistance / (1000 * 60 * 60 * 24));
+                var feedbackHours = Math.floor((feedbackDistance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                var feedbackMinutes = Math.floor((feedbackDistance % (1000 * 60 * 60)) / (1000 * 60));
+                var feedbackSeconds = Math.floor((feedbackDistance % (1000 * 60)) / 1000);
         
                 // Display the result in the elements with id="countdown" and id="countdown-anniversary"
-                document.getElementById("countdown").innerHTML = days + "D " + hours + "H " + minutes + "M " + seconds + "S";
-                document.getElementById("countdown-anniversary").innerHTML = anniversaryDays + "D " + anniversaryHours + "H " + anniversaryMinutes + "M " + anniversarySeconds + "S";
-        
+                if (document.getElementById("countdown")) {
+                    document.getElementById("countdown").innerHTML = days + "D " + hours + "H " + minutes + "M " + seconds + "S";
+                }
+                if (document.getElementById("countdown-anniversary")) {
+                    document.getElementById("countdown-anniversary").innerHTML = anniversaryDays + "D " + anniversaryHours + "H " + anniversaryMinutes + "M " + anniversarySeconds + "S";
+                }
+                if (document.getElementById("feedback-countdown")) {
+                    document.getElementById("feedback-countdown").innerHTML = feedbackDays + "D " + feedbackHours + "H " + feedbackMinutes + "M " + feedbackSeconds + "S";
+                }
+
                 // If the countdowns are finished, write some text
-                if (distance < 0) {
+                if (distance < 0 && document.getElementById("countdown")) {
                     clearInterval(countdownFunction);
                     document.getElementById("countdown").innerHTML = "EXPIRED";
                 }
-                if (anniversaryDistance < 0) {
-                    clearInterval(countdownFunction);
+                if (anniversaryDistance < 0 && document.getElementById("countdown-anniversary")) {
                     document.getElementById("countdown-anniversary").innerHTML = "EXPIRED";
+                }
+                if (feedbackDistance < 0 && document.getElementById("feedback-countdown")) {
+                    document.getElementById("feedback-countdown").innerHTML = "EXPIRED";
                 }
             }, 1000);
         });
         </script>
     </body>
 </html>
-
