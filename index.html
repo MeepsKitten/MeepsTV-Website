@@ -10,14 +10,6 @@
 </head>
 <body>
     <div class="container">
-        <section class="happening-soon">
-            <h2>Now Occurring</h2>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdLrsQetWh_Cjd789KPRcYDt43lncPLV1K0Qr1hNTNrB2XaZw/viewform?usp=sharing&ouid=115000672118566448093" target="_blank" class="button">
-                <span class="main-text">Foot Rub Application</span>
-                <span class="subtitle">Click here to apply</span>
-            </a>
-            <div id="countdown" class="countdown">loading</div> 
-        </section>
         <header>
             <img src="pfp.webp" alt="Profile Picture" class="profile-picture">
             <h1>Meeps' Links</h1>
@@ -77,6 +69,7 @@
                         <a href="https://fixvx.com/gecko_Zen" target="_blank" class="button"><span class="main-text">gecko_Zen</span> <span class="subtitle">Twitch Intro image</span></a>
                         <a href="https://fixvx.com/dokibird" target="_blank" class="button"><span class="main-text">dokibird</span> <span class="subtitle">Emotes</span></a>
                         <a href="https://fixvx.com/Julunes_Art" target="_blank" class="button"><span class="main-text">Julunes_Art</span> <span class="subtitle">Emotes & Beeps</span></a>
+                        <a href="https://fixvx.com/AlphaLyncis" target="_blank" class="button"><span class="main-text">AlphaLyncis</span> <span class="subtitle">Fursuit Maker</span></a>
                     </div>
                 </div>
             </section>
@@ -114,35 +107,5 @@
     </div>
 
     <script src="script.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // Set the date we're counting down to - January 29, 2026
-            var countDownDate = new Date("January 29, 2026 00:00:00").getTime();
-        
-            // Update the countdown every 1 second
-            var countdownFunction = setInterval(function () {
-                // Get today's date and time
-                var now = new Date().getTime();
-        
-                // Find the distance between now and the countdown date
-                var distance = countDownDate - now;
-        
-                // Time calculations for days, hours, minutes, and seconds
-                var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-        
-                // Display the result in the element with id="countdown"
-                document.getElementById("countdown").innerHTML = days + "D " + hours + "H " + minutes + "M " + seconds + "S";
-        
-                // If the countdown is finished, write some text
-                if (distance < 0) {
-                    clearInterval(countdownFunction);
-                    document.getElementById("countdown").innerHTML = "EXPIRED";
-                }
-            }, 1000);
-        });
-        </script>
     </body>
 </html>
